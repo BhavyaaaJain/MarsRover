@@ -8,6 +8,7 @@ package MarsRover;
  *
  * @author LENOVO
  */
+//The Superclass for commands to move the rover
 abstract class Command {
     abstract void move(Rover rover, Grid grid);
 }
