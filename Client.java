@@ -13,16 +13,24 @@ import java.util.Map;
 public class Client {
     public static void main(String args[])
     {
-        
+        //Instantiate grid
         Grid grid = new Grid(10, 10);
+        
+        //Add obstacles
         grid.addObstacle(2,2);
         grid.addObstacle(3,5);
-        
+
+        //Instantiate the initial direction of the rover
         Rover rover = new Rover(0, 0, 'N');
+
+        //Instantiate the commands the rover can take
         Forward f = new Forward();
         Right r = new Right();
         Left l = new Left();
+        
         char[] commands = {'M', 'M', 'R', 'M', 'L', 'M'};
+
+        //Reading each command
         for (char c: commands)
         {
             switch(c){
