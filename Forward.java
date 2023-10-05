@@ -13,7 +13,10 @@ import java.util.ArrayList;
 public class Forward extends Command {
     public void move(Rover rover, Grid grid)
     {
+        //Variables to store the new possible location of rover
         int newx=rover.x, newy=rover.y;
+
+        //Cases to move when rover is facing a particular direction
         switch (rover.dir) {
             case 'N':
                 newy+=1;
@@ -32,13 +35,15 @@ public class Forward extends Command {
         ArrayList<Integer> coord = new ArrayList<Integer>();
         coord.add(newx);
         coord.add(newy);
-        
+
+        //Check if the new location already has some obstacle and update obstacle count
         if (grid.obstacle.contains(coord))
         {
             rover.o++;
             return;
         }
-        
+
+        //Check if the rover is inside the grid and update the actual coordianates 
         else if (newx>=0 && newx<grid.n && newy>=0 && newy<grid.m)
         {
             rover.x=newx;
