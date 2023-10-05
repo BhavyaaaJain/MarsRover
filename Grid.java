@@ -11,6 +11,7 @@ import java.util.ArrayList;
  * @author LENOVO
  */
 public class Grid {
+    //Initialise grid and obstacles array
     int n, m;
     ArrayList<ArrayList<Integer>> obstacle;
     public Grid(int n, int m)
@@ -19,7 +20,8 @@ public class Grid {
         this.m=m;
         obstacle = new ArrayList<ArrayList<Integer>>(); 
     }
-    
+
+    //Adding obstacle coordinates in the obstacle array for future use
     public void addObstacle(int x, int y)
     {
         ArrayList<Integer> pair = new ArrayList<>();
