@@ -12,9 +12,9 @@ import java.util.Map;
  * @author LENOVO
  */
 public class Rover {
+    //Initialise rover coordinates, direction and obstacles encountered in the path
     int x, y, o;
-    char dir;
-    
+    char dir;    
     public Rover(int x, int y, char dir)
     {
         this.x=x;
