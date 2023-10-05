@@ -13,6 +13,7 @@ import java.util.Map;
  * @author LENOVO
  */
 public class Left extends Command{
+    //Hashmap to store the effect of moving left from a present particular
     Map<Character, Character> left = new HashMap<>();
     public Left()
     {
@@ -21,7 +22,8 @@ public class Left extends Command{
         left.put('S', 'E');
         left.put('E', 'N');
     }
-    
+
+    //Update the rover direction accordingly
     public void move(Rover rover, Grid grid)
     {
         rover.dir = left.get(rover.dir);
